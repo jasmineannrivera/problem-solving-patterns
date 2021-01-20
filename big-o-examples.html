@@ -13,7 +13,8 @@
     function addUpTo(n) {
         return n * (n + 1) / 2;
     }
-    //Time Complexity:
+    //Time Complexity: O(1) constant
+	//space complexity: O(1) constant
 
 
 
@@ -24,8 +25,9 @@
         }
         return total;
     }
-    //Time Complexity:
+    //Time Complexity: O(n) linear
 	//Note that the number of operations is (eventually) bounded by a multiple of n
+	//space complexity: o(1) constant
 
 
 
@@ -40,7 +42,8 @@
         }
         console.log("Back down. Bye!");
     }
-	//Time Complexity:
+	//Time Complexity: O(n) linear
+	//space complexity: o(1) constant
 
 
 
@@ -51,8 +54,9 @@
                 console.log(i, j);
             }
         }
+
     }
-	//Time Complexity:
+	//Time Complexity: O(n^2) Quadratic
 
 
 
@@ -60,24 +64,26 @@
     //BIG O NOTATION: SPACE COMPLEXITY
 
     function sum(arr) {
-        let total = 0;
+        let total = 0; //O(1) constant
         for (let i = 0; i < arr.length; i++) {
             total += arr[i];
         }
         return total;
     }
-    //Space Complexity:
+    //Space Complexity: O(1) constant
+	//time complexity: O(n) linear
 
 
 
     function double(arr) {
-        let newArr = [];
-        for (let i = 0; i < arr.length; i++) {
-            newArr.push(2 * arr[i]);
+        let newArr = []; //O(n) linear
+        for (let i = 0; i < arr.length; i++) { //o(n)
+            newArr.push(2 * arr[i]); //o(1)
         }
         return newArr;
     }
-	//Space Complexity:
+	//Space Complexity: O(n) linear
+    //time complexity: O(n) linear
 
 
 
