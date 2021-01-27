@@ -15,6 +15,21 @@
 	 -This can often avoid the need for nested loops or O(n^2) operations with strings or arrays
 	*/
 
+	let myString = "Jupiterrrr!";  //letter : frequency
+
+	let myObj = {};
+    //mystring[i] === char
+	for (let char of myString) {
+		if (!myObj[char]) {
+		    myObj[char] = 1;
+		} else {
+		    myObj[char]++;
+		}
+
+	}
+    console.log(myString);
+    console.log(myObj);
+
 
 </script>
 </body>
