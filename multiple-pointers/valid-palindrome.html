@@ -9,9 +9,37 @@
 	//Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
     //Note: For the purpose of this problem, we define empty string as valid palindrome.
 	//isPalindrome("A man, a plan, a canal: Panama") //true
-	//isPalindrome("race a car") //true
+	//isPalindrome("race a car") //false
+	//isPalindrome("hannah") //true
 
+	//account for empty strings
+	//remove non-alphanumeric chars (regex maybe?)
+	//lowercase string
+	//save sanitized string to use
 
+	function isPalindrome(str) {
+
+	    if (str.length === 0) {
+	        return true;
+	    }
+    let newStr = str.toLowerCase().match(/[a-z]/gi).join("");
+	let left = 0;
+	let right = newStr.length - 1;
+
+	while (left < right) {
+	    if (newStr[left] !== newStr[right]) {
+	        return false;
+	    }
+	    left++;
+	    right--;
+	}
+	return true;
+
+    }
+
+    console.log(isPalindrome("A man, a plan, a canal: Panama")); //true
+    console.log(isPalindrome("race a car")); //false
+    console.log(isPalindrome("racecar")); //true
 </script>
 </body>
 </html>
